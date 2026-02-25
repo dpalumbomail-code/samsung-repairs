@@ -796,40 +796,121 @@ select {
     </div>
   </div>
 
-  <!-- ── STEP 3: PROBLEMA ── -->
-  <div class="step-panel" id="step3">
-    <div class="step-hdr" style="position:relative;">
-      <button class="step-hdr-back" onclick="next(2)">←</button>
-      <span class="step-hdr-title">Descrivi il problema</span>
-      <span class="step-hdr-count">[3/5]</span>
+ <!-- Step 3: Problemi -->
+<div class="step" id="step3" style="display: none;">
+    <div class="step-indicator">
+        <div class="step-number active">3</div>
+        <div class="step-label">Problemi Riscontrati</div>
     </div>
-    <div class="card">
-      <div class="card-title">Qual è il problema?</div>
-      <div class="card-sub">Seleziona i problemi riscontrati (puoi sceglierne più di uno)</div>
-      <div class="prob-grid" id="probGrid"></div>
-      <div class="form-group">
-        <label>Descrizione aggiuntiva <span class="opt">(consigliato)</span></label>
-        <textarea id="probDesc" placeholder="Descrivi quando è successo, se c'è stato un danno fisico, se il dispositivo si accende ancora..."></textarea>
-      </div>
-      <div class="div-lbl">informazioni extra per il tecnico</div>
-      <div class="toggle-row" onclick="togWarranty()">
-        <div class="toggle-info"><div class="tl">🛡️ Dispositivo in garanzia Samsung?</div><div class="td">Aiuta il tecnico a preparare la documentazione corretta</div></div>
-        <div class="tog-sw" id="warSw"></div>
-      </div>
-      <div class="toggle-row" onclick="togPin()">
-        <div class="toggle-info"><div class="tl">🔐 Fornisci PIN di sblocco</div><div class="td">Facoltativo — cifrato AES-256, eliminato automaticamente dopo 7 giorni</div></div>
-        <div class="tog-sw" id="pinSw"></div>
-      </div>
-      <div id="pinField" style="display:none;" class="form-group">
-        <div class="notice warning" style="margin-bottom:8px;">⚠️ Il PIN viene cifrato con AES-256 e usato solo per la diagnosi. Viene eliminato automaticamente entro 7 giorni o al completamento della riparazione. Non verrà mai condiviso.</div>
-        <label>PIN / Password <span class="opt">(cifrato in transito e in storage)</span></label>
-        <input type="password" id="pinInput" placeholder="Il tuo PIN o password" autocomplete="new-password">
-      </div>
-      <div style="margin-top:20px;">
-        <button class="btn-primary" onclick="next(4)">Continua →</button>
-      </div>
+
+    <div class="form-group">
+        <label class="form-label">
+            Seleziona i problemi riscontrati <span class="required">*</span>
+        </label>
+        <p class="helper-text">Puoi selezionare più opzioni</p>
+        
+        <div class="checkbox-group">
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Schermo rotto">
+                <span class="checkbox-label">📱 Schermo rotto</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Batteria">
+                <span class="checkbox-label">🔋 Batteria (scarsa durata)</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Connettore di ricarica">
+                <span class="checkbox-label">🔌 Connettore di ricarica</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Fotocamera posteriore">
+                <span class="checkbox-label">📷 Fotocamera posteriore</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Fotocamera frontale">
+                <span class="checkbox-label">🤳 Fotocamera frontale</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Cover posteriore">
+                <span class="checkbox-label">🛡️ Cover posteriore rotta</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Altoparlante">
+                <span class="checkbox-label">🔊 Altoparlante</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Microfono">
+                <span class="checkbox-label">🎤 Microfono</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Non si accende">
+                <span class="checkbox-label">⚡ Non si accende</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Non si carica">
+                <span class="checkbox-label">🔋 Non si carica</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Surriscaldamento">
+                <span class="checkbox-label">🌡️ Surriscaldamento</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Tasti volume">
+                <span class="checkbox-label">🔊 Tasti volume</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Tasto accensione">
+                <span class="checkbox-label">⚡ Tasto accensione</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Riparazione in garanzia">
+                <span class="checkbox-label">🛡️ Riparazione in garanzia</span>
+            </label>
+            
+            <label class="checkbox-card">
+                <input type="checkbox" name="problems" value="Altro">
+                <span class="checkbox-label">❓ Altro</span>
+            </label>
+        </div>
+        <div class="error-message" id="error-problems"></div>
     </div>
-  </div>
+
+    <div class="form-group" id="problem-description-group" style="display: none;">
+        <label for="problem-description" class="form-label">
+            Descrivi il problema <span class="required">*</span>
+        </label>
+        <textarea 
+            id="problem-description" 
+            name="problem_description" 
+            rows="4" 
+            class="form-input"
+            placeholder="Descrivi nel dettaglio il problema riscontrato..."
+        ></textarea>
+        <div class="error-message" id="error-problem-description"></div>
+    </div>
+
+    <div class="button-group">
+        <button type="button" class="btn-secondary" onclick="prevStep()">
+            <span class="btn-icon">←</span> Indietro
+        </button>
+        <button type="button" class="btn-primary" onclick="nextStep()">
+            Avanti <span class="btn-icon">→</span>
+        </button>
+    </div>
+</div>
 
   <!-- ── STEP 4: DATI CLIENTE ── -->
   <div class="step-panel" id="step4">
