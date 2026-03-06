@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Assistenza Certificata Samsung</title>
+<meta name="description" content="Informativa sul trattamento dei dati personali ai sensi del GDPR (Regolamento UE 2016/679) - Intecit Italia">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black:   #1C1C1C;
+  --white:   #FFFFFF;
+  --grey-bg: #F5F5F5;
+  --grey-lt: #F0F0F0;
+  --grey-md: #E0E0E0;
+  --grey-txt:#888888;
+  --grey-lbl:#555555;
+  --sans: 'Noto Sans','SamsungOne',-apple-system,sans-serif;
+  --shadow-card: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--grey-bg);
+  color: var(--black);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--black);
+  padding: 0 20px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topnav-back {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.topnav-back:hover { opacity: 1; }
+.topnav-title {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+.topnav-spacer { width: 80px; }
+
+/* LAYOUT */
+.page-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+/* HERO */
+.hero {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  padding: 36px 32px 28px;
+  margin-bottom: 24px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--grey-lt);
+  border-radius: 50px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--grey-lbl);
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+.hero h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.hero-meta {
+  font-size: 13px;
+  color: var(--grey-txt);
+}
+
+/* SECTION CARD */
+.section-card {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  padding: 28px 32px;
+  margin-bottom: 16px;
+}
+.section-card h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-card h2 .ico { font-size: 18px; }
+.section-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 10px;
+}
+.section-card p:last-child { margin-bottom: 0; }
+.section-card ul {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.section-card ul li { margin-bottom: 4px; }
+
+/* TABLE */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 10px;
+}
+.data-table th {
+  background: var(--grey-lt);
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--grey-lbl);
+  letter-spacing: 0.3px;
+}
+.data-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--grey-lt);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.data-table tr:last-child td { border-bottom: none; }
+
+/* HIGHLIGHT BOX */
+.highlight {
+  background: var(--grey-lt);
+  border-radius: 12px;
+  padding: 16px 18px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #333;
+  margin-top: 12px;
+}
+.highlight strong { color: var(--black); }
+
+/* CONTACT BOX */
+.contact-box {
+  background: var(--black);
+  border-radius: 16px;
+  padding: 22px 24px;
+  color: #fff;
+  margin-top: 12px;
+}
+.contact-box p {
+  color: rgba(255,255,255,0.75) !important;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.contact-box a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.contact-box a:hover { text-decoration: underline; }
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--grey-txt);
+  padding-top: 8px;
+}
+.footer a {
+  color: var(--grey-txt);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .hero, .section-card { padding: 22px 18px; }
+  .hero h1 { font-size: 22px; }
+  .contact-box { padding: 18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<nav class="topnav">
+  <a class="topnav-back" href="/">← Torna al sito</a>
+  <span class="topnav-title">Privacy Policy</span>
+  <div class="topnav-spacer"></div>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">🔒 GDPR Reg. UE 2016/679</div>
+    <h1>Informativa sulla Privacy</h1>
+    <p class="hero-meta">Ultimo aggiornamento: Marzo 2026 · Versione 1.0</p>
+  </div>
+
+  <!-- 1. TITOLARE -->
+  <div class="section-card">
+    <h2><span class="ico">🏢</span> 1. Titolare del Trattamento</h2>
+    <p>Il Titolare del trattamento dei dati personali raccolti tramite il sito <strong>assistenzacertificata.it</strong> è:</p>
+    <div class="highlight">
+      <strong>Intecit Italia</strong><br>
+      Sede: Cologno Monzese (MI), Italia<br>
+      Email: <strong>info@intecitalia.it</strong><br>
+      Sito web: <strong>assistenzacertificata.it</strong>
+    </div>
+  </div>
+
+  <!-- 2. DATI RACCOLTI -->
+  <div class="section-card">
+    <h2><span class="ico">📋</span> 2. Dati Personali Raccolti</h2>
+    <p>In occasione della prenotazione di una riparazione, raccogliamo i seguenti dati personali:</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Dato</th>
+          <th>Finalità</th>
+          <th>Base giuridica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nome e cognome</td>
+          <td>Identificazione del cliente</td>
+          <td>Esecuzione contratto</td>
+        </tr>
+        <tr>
+          <td>Indirizzo email</td>
+          <td>Invio conferme, preventivi e comunicazioni sulla riparazione</td>
+          <td>Esecuzione contratto</td>
+        </tr>
+        <tr>
+          <td>Numero di telefono</td>
+          <td>Contatto operativo, aggiornamenti via WhatsApp (se consenso dato)</td>
+          <td>Esecuzione contratto / Consenso</td>
+        </tr>
+        <tr>
+          <td>Indirizzo di ritiro</td>
+          <td>Organizzazione ritiro a domicilio (se selezionato)</td>
+          <td>Esecuzione contratto</td>
+        </tr>
+        <tr>
+          <td>Modello dispositivo e problemi riportati</td>
+          <td>Preventivazione e gestione tecnica della riparazione</td>
+          <td>Esecuzione contratto</td>
+        </tr>
+        <tr>
+          <td>Data e ora della prenotazione</td>
+          <td>Organizzazione agenda laboratorio</td>
+          <td>Esecuzione contratto</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px;">Non raccogliamo dati particolari (ex art. 9 GDPR), dati di pagamento tramite questo modulo, né effettuiamo profilazione automatizzata.</p>
+  </div>
+
+  <!-- 3. FINALITÀ -->
+  <div class="section-card">
+    <h2><span class="ico">🎯</span> 3. Finalità del Trattamento</h2>
+    <p>I tuoi dati vengono trattati esclusivamente per:</p>
+    <ul>
+      <li>Gestire la prenotazione e la riparazione del dispositivo</li>
+      <li>Inviare il preventivo indicativo e le comunicazioni operative</li>
+      <li>Contattarti per aggiornamenti sullo stato della riparazione</li>
+      <li>Adempiere a obblighi contrattuali, fiscali e di legge</li>
+      <li>Inviare aggiornamenti via WhatsApp, solo se hai dato esplicito consenso</li>
+    </ul>
+    <p>Non utilizziamo i tuoi dati per finalità di marketing, non li vendiamo e non li cediamo a terzi per scopi commerciali.</p>
+  </div>
+
+  <!-- 4. CONSERVAZIONE -->
+  <div class="section-card">
+    <h2><span class="ico">🗓️</span> 4. Conservazione dei Dati</h2>
+    <p>I dati relativi alla prenotazione vengono conservati per <strong>24 mesi</strong> dalla data della riparazione, salvo diversi obblighi di legge (es. conservazione dati fiscali: 10 anni).</p>
+    <p>Trascorso il periodo di conservazione, i dati vengono cancellati o anonimizzati in modo irreversibile.</p>
+  </div>
+
+  <!-- 5. CONDIVISIONE -->
+  <div class="section-card">
+    <h2><span class="ico">🔗</span> 5. Condivisione con Terze Parti</h2>
+    <p>I tuoi dati possono essere condivisi esclusivamente con i seguenti soggetti, nella misura strettamente necessaria:</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Soggetto</th>
+          <th>Ruolo</th>
+          <th>Finalità</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Supabase Inc.</td>
+          <td>Responsabile del trattamento</td>
+          <td>Archiviazione database (server UE - Frankfurt)</td>
+        </tr>
+        <tr>
+          <td>Brevo (ex Sendinblue)</td>
+          <td>Responsabile del trattamento</td>
+          <td>Invio email transazionali</td>
+        </tr>
+        <tr>
+          <td>n8n / Railway</td>
+          <td>Responsabile del trattamento</td>
+          <td>Automazione flusso prenotazioni</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px;">Tutti i fornitori sono stati selezionati per il rispetto del GDPR. Il database è ospitato in Europa (Frankfurt, Germania).</p>
+  </div>
+
+  <!-- 6. DIRITTI -->
+  <div class="section-card">
+    <h2><span class="ico">⚖️</span> 6. I Tuoi Diritti</h2>
+    <p>Ai sensi degli articoli 15-22 del GDPR, hai diritto di:</p>
+    <ul>
+      <li><strong>Accesso</strong> — ottenere copia dei tuoi dati in nostro possesso</li>
+      <li><strong>Rettifica</strong> — correggere dati inesatti o incompleti</li>
+      <li><strong>Cancellazione</strong> — richiedere la cancellazione ("diritto all'oblio")</li>
+      <li><strong>Limitazione</strong> — limitare il trattamento in determinati casi</li>
+      <li><strong>Portabilità</strong> — ricevere i dati in formato strutturato e leggibile</li>
+      <li><strong>Opposizione</strong> — opporti al trattamento per motivi legittimi</li>
+      <li><strong>Revoca del consenso</strong> — in qualsiasi momento, senza pregiudizio per il trattamento precedente</li>
+    </ul>
+    <p style="margin-top:10px;">Puoi esercitare i tuoi diritti contattandoci tramite i recapiti indicati di seguito. Risponderemo entro 30 giorni.</p>
+    <p>Hai inoltre il diritto di presentare reclamo al <strong>Garante per la Protezione dei Dati Personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>).</p>
+  </div>
+
+  <!-- 7. COOKIE -->
+  <div class="section-card">
+    <h2><span class="ico">🍪</span> 7. Cookie e Tecnologie di Tracciamento</h2>
+    <p>Il sito <strong>assistenzacertificata.it</strong> utilizza esclusivamente cookie tecnici strettamente necessari al funzionamento del form di prenotazione.</p>
+    <p>Non utilizziamo cookie di profilazione, cookie di terze parti per scopi pubblicitari, né strumenti di analisi comportamentale (es. Google Analytics).</p>
+    <p>Per questo motivo non è necessario il banner di consenso ai cookie, ai sensi delle linee guida del Garante Privacy italiano del 10 giugno 2021.</p>
+  </div>
+
+  <!-- 8. SICUREZZA -->
+  <div class="section-card">
+    <h2><span class="ico">🛡️</span> 8. Sicurezza dei Dati</h2>
+    <p>Adottiamo misure tecniche e organizzative adeguate per proteggere i tuoi dati da accessi non autorizzati, perdita o divulgazione:</p>
+    <ul>
+      <li>Trasmissione dati protetta tramite <strong>HTTPS/TLS</strong></li>
+      <li>Database con controllo degli accessi (<strong>Row Level Security</strong>)</li>
+      <li>Accesso ai dati limitato al personale autorizzato</li>
+      <li>Infrastruttura cloud con certificazioni di sicurezza standard (SOC 2)</li>
+    </ul>
+  </div>
+
+  <!-- 9. MODIFICHE -->
+  <div class="section-card">
+    <h2><span class="ico">📝</span> 9. Modifiche alla Privacy Policy</h2>
+    <p>Ci riserviamo il diritto di aggiornare questa informativa in caso di modifiche normative o operative. La data di "Ultimo aggiornamento" in cima alla pagina indica la versione vigente.</p>
+    <p>In caso di modifiche sostanziali, ne daremo comunicazione tramite avviso sul sito o via email agli utenti registrati.</p>
+  </div>
+
+  <!-- CONTATTI -->
+  <div class="section-card">
+    <h2><span class="ico">✉️</span> Contatti per la Privacy</h2>
+    <p>Per qualsiasi richiesta relativa al trattamento dei tuoi dati personali:</p>
+    <div class="contact-box">
+      <p>Titolare del trattamento</p>
+      <a href="mailto:info@intecitalia.it">info@intecitalia.it</a>
+      <p style="margin-top:12px;">Oggetto email consigliato: <em>"Richiesta Privacy - [tuo nome]"</em></p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>© 2026 Intecit Italia · <a href="/">assistenzacertificata.it</a></p>
+    <p style="margin-top:4px;">Informativa redatta ai sensi del Regolamento UE 2016/679 (GDPR)</p>
+  </div>
+
+</div>
+</body>
+</html>
